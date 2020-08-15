@@ -1,0 +1,34 @@
+
+PROGRAM TEST
+
+IMPLICIT NONE
+
+
+REAL, DIMENSION(1:3,1:1):: ANSWERS, SOLVED
+REAL, DIMENSION(1:3,1:3):: A
+
+
+
+OPEN(unit=20,file='matrix.dat')
+
+READ(20,*) A(1,1), A(1,2), A(1,3)
+READ(20,*) A(2,1), A(2,2), A(2,3) 
+READ(20,*) A(3,1), A(3,2), A(3,3)
+
+CLOSE(20)
+
+ANSWERS(1,1)=0 ; ANSWERS(2,1)=3 ; ANSWERS(3,1)=1
+
+WRITE(6,*) A
+WRITE(6,*) ANSWERS
+WRITE(6,*) 'HERE'
+
+Solved=Matmul(A,Answers)
+
+
+
+WRITE(6,*) Transpose(SOLVED)
+
+
+
+END PROGRAM

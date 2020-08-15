@@ -1,0 +1,12 @@
+C:\Users\domgr\Documents\University\Uni Secound Year, First Term, 2\Uni Secound Year, First Term\Energy, Entropy and Numerical Physics\Computing Course Work\Assignment 2\FreeFormat3.F95(7) : warning 197 - Variable D2TEMPDX2 has been declared but not used
+
+Access violation:
+The instruction at address 452e3374 attempted to read from location 452e3374
+ 452e3374 routine at address 452E3374 [+0000]
+eax=6e676973   ebx=46656572   ecx=0ebe2a3c
+edx=0eb60000   esi=465c3220   edi=746e656d
+ebp=616d726f   esp=0370f5a0   IOPL=0
+ds=002b   es=002b   fs=0053
+gs=002b   cs=0023   ss=002b
+flgs=00010202 [NC OP NZ SN DN NV]
+0360/7820 TSTK=7 [ ]

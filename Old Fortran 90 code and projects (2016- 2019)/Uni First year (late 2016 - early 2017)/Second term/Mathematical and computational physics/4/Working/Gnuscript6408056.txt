@@ -1,0 +1,8 @@
+set terminal png
+set output "Triangle6408056.png"  
+set xrange [0:3]
+set xlabel "X"
+set ylabel "Y"
+set zeroaxis
+set termoption enhanced
+plot "triangle.dat" u 1:2 w l, "triangle.dat" u 3:4 w l 

@@ -1,0 +1,38 @@
+PROGRAM two
+REAL:: X, Y, H, YatX, YatXplusH, Dforxh
+REAL, EXTERNAL:: Fx
+
+
+INTERFACE 
+FUNCTION Fx(X)
+REAL, INTENT(IN) :: X
+REAL:: Fx, YatX, YatXplusH
+END FUNCTION  Fx
+END INTERFACE
+
+READ(5,*) X
+H=2
+
+
+
+YatX= Fx(X)
+WRITE(6,*) YatX
+X=X+H
+YatXplusH=Fx(X)
+WRITE(6,*) YatXplusH
+Dforxh=(YatXplusH-YatX)/H
+WRITE(6,*) Dforxh
+
+
+
+END PROGRAM
+
+
+FUNCTION Fx(X)
+IMPLICIT NONE
+REAL, INTENT (IN) :: X
+REAL:: Fx
+
+Fx=1/(X**2.0+3.0*X+2)
+
+END FUNCTION Fx
